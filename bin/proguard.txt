@@ -1,0 +1,105 @@
+# view res/layout/healthy_fragment.xml #generated:18
+# view res/layout/layout_tianqi.xml #generated:82
+# view res/layout/umeng_fb_activity_help.xml #generated:14
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.baidu.location.f { <init>(...); }
+
+# view res/layout/rank_fragment.xml #generated:6
+-keep class com.handmark.pulltorefresh.library.PullToRefreshListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:77
+-keep class com.lzstudio.healthy.activity.AboutUsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class com.lzstudio.healthy.activity.BaseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class com.lzstudio.healthy.activity.BaseLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class com.lzstudio.healthy.activity.ChooseCityActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:82
+-keep class com.lzstudio.healthy.activity.NewRunActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class com.lzstudio.healthy.activity.NewsDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.lzstudio.healthy.activity.RunDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class com.lzstudio.healthy.activity.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:86
+-keep class com.lzstudio.healthy.activity.SettingHeadActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class com.lzstudio.healthy.activity.SplashSpotActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.lzstudio.healthy.pedometer.StepService { <init>(...); }
+
+# view res/layout/activity_setting.xml #generated:28
+# view res/layout/joined_user_item.xml #generated:8
+# view res/layout/rank_item.xml #generated:8
+# view res/layout/residemenu.xml #generated:40
+-keep class com.lzstudio.healthy.view.ciclehead.CircleImageView { <init>(...); }
+
+# view res/layout/activity_choose_city.xml #generated:40
+-keep class com.lzstudio.healthy.view.city.ContactListViewImpl { <init>(...); }
+
+# view res/layout/set_head_img.xml #generated:10
+-keep class com.lzstudio.healthy.view.cutphoto.ClipImageLayout { <init>(...); }
+
+# view res/layout/main_fragment.xml #generated:12
+-keep class com.lzstudio.healthy.view.myprogressview.MyProgressView { <init>(...); }
+
+# view res/layout/list_run_info.xml #generated:6
+# view res/layout/news_list.xml #generated:6
+-keep class com.lzstudio.healthy.view.pulltorefresh.PullToRefreshListView { <init>(...); }
+
+# view res/layout/healthy_fragment.xml #generated:9
+-keep class com.lzstudio.healthy.view.tabindicator.ViewPagerIndicator { <init>(...); }
+
+# view res/layout/loading.xml #generated:9
+-keep class com.lzstudio.healthy.view.titanic.TitanicTextView { <init>(...); }
+
+# view AndroidManifest.xml #generated:148
+-keep class com.lzstudio.healthy.wxapi.WXEntryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:154
+-keep class com.mob.tools.MobUIShell { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class com.umeng.fb.ConversationActivity { <init>(...); }
+
+# view res/layout/umeng_fb_fragment.xml #generated:13
+-keep class com.umeng.fb.widget.InterceptTouchSwipeRefreshLayout { <init>(...); }
+
+# view res/layout/umeng_fb_activity_help.xml #generated:8
+-keep class com.umeng.fb.widget.PagerSlidingTabStrip { <init>(...); }
+
+# view AndroidManifest.xml #generated:108
+-keep class com.volley.tools.taay { <init>(...); }
+
+# view AndroidManifest.xml #generated:123
+-keep class com.volley.tools.tagy { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.volley.tools.tahy { <init>(...); }
+
+# view AndroidManifest.xml #generated:118
+-keep class com.volley.tools.tbay { <init>(...); }
+
+# view AndroidManifest.xml #generated:134
+-keep class com.wechat.tools.AdBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:139
+-keep class com.wechat.tools.AdReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:131
+-keep class com.wechat.tools.AdService { <init>(...); }
+

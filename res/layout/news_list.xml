@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.lzstudio.healthy.view.pulltorefresh.PullToRefreshListView
+        android:id="@+id/lv_pulltorefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_view_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/news_list_line"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/listview_selector"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/healthy_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading" />
+
+</FrameLayout>

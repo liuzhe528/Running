@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="提示:领取一次刮刮卡需要消耗50积分，在刮开刮刮卡后点击领奖进行领取，当话费累积大于10元时可以进行兑换"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/iv_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_info"
+        android:src="@drawable/ic_shop" />
+
+    <RelativeLayout
+        android:id="@+id/shop_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/iv_shop"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible" >
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/shop_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_shop"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="66dp"
+        android:text="积分: 100分"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/shop_huafei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_shop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="66dp"
+        android:layout_toRightOf="@id/shop_point"
+        android:text="话费: 0.4元"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bt_getCard"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/shop_huafei"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_start_selector"
+        android:text="领取刮刮卡"
+        android:textColor="@color/bt_textColor" />
+
+    <Button
+        android:id="@+id/bt_lingjiang"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/bt_getCard"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_start_selector"
+        android:text="领奖"
+        android:textColor="@color/bt_textColor" />
+
+    <Button
+        android:id="@+id/bt_gethuafei"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/bt_lingjiang"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_start_selector"
+        android:text="兑换话费"
+        android:textColor="@color/bt_textColor" />
+
+    <RelativeLayout
+        android:id="@+id/rl_shop_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/shop_loading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_shop_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_loading"
+            android:gravity="center"
+            android:text="正在加载..."
+            android:textColor="@color/bt_textColor"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shop_lingqu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77aaaaaa"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            layout="@layout/layout_loading" >
+        </include>
+    </RelativeLayout>
+
+</RelativeLayout>

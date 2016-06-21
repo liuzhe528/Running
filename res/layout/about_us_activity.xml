@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_login" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="1，计步器\n        点击开始即可开始计步，计步的同时会开启计时，点击暂停后可以再次点击提交，将您的步数上传到服务器。首先要进行注册。\n\n2，天气预报\n        会根据网络和gps进行自动，同时也支持手动修改城市位置。\n\n3,健康知识\n        可以浏览一些有关于健康的知识，更好的优化我们的生活。\n\n4，设置\n        可以设置我们的体重和步长以便于更加精确的计算出您的跑步数据，同时也可以调节灵敏度，使它更加贴近您的步伐。\n\n5，积分抽奖\n        抽取的奖励累积达到10元时，我们将给予兑换，兑换奖励将在两个工作日内到账。\n\n6，意见反馈\n        在使用中您有什么建议都可以通过意见反馈向我们提出，我们会尽量解决。\n\n"
+            android:textColor="@color/bt_textColor"
+            android:textScaleX="1"
+            android:textSize="20sp" />
+    </ScrollView>
+
+</LinearLayout>

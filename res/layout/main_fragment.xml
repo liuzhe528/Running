@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.lzstudio.healthy.view.myprogressview.MyProgressView
+            android:id="@+id/progressBar"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/progressBar"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_start_selector"
+            android:text="@string/bt_start"
+            android:textColor="@color/bt_textColor"
+            android:textSize="23sp" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@id/start"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/progressBar"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_stop_selector"
+            android:text="@string/bt_stop"
+            android:textColor="@color/bt_textColor"
+            android:textSize="23sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_desire_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rl_cicle_bg" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/desire_distance"
+                android:textColor="@color/bt_textColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_desire_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="3dp"
+                android:text="@string/distance"
+                android:textColor="@color/bt_textColor"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_calories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_desire_distance"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rl_cicle_bg" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/burning_calories"
+                android:textColor="@color/bt_textColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="3dp"
+                android:text="@string/calories"
+                android:textColor="@color/bt_textColor"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_calories"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rl_cicle_bg" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="总路程"
+                android:textColor="@color/bt_textColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="3dp"
+                android:text="100m"
+                android:textColor="@color/bt_textColor"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dialog"
+            android:layout_width="250dp"
+            android:layout_height="170dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dialog_bg"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_set_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="设置目标距离"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_distance"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_set_distance"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_border"
+                android:hint="请输入目标距离(单位:米)"
+                android:inputType="number"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/bt_cancle"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/et_distance"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bt_start_selector"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/bt_textColor"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/bt_sure"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/et_distance"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bt_start_selector"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/bt_textColor"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

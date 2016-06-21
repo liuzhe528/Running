@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv_running"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:src="@drawable/running" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_running"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_running"
+        android:gravity="center"
+        android:text="copyright @lzstudio"
+        android:textColor="@color/bt_textColor"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/splashview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dip" >
+
+        <View
+            android:id="@+id/cutline"
+            android:layout_width="match_parent"
+            android:layout_height="3dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/pic_line" />
+    </RelativeLayout>
+
+</RelativeLayout>

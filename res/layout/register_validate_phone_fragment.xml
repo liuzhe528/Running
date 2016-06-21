@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tv_register_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/register_phonenumber"
+            android:textColor="@color/bt_textColor"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/bt_getvalidatenum"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_register_phone"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bt_start_selector"
+            android:gravity="center"
+            android:text="@string/register_getvalidatenum"
+            android:textColor="@color/bt_textColor"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/et_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/bt_getvalidatenum"
+            android:layout_alignLeft="@id/tv_register_phone"
+            android:layout_toLeftOf="@id/bt_getvalidatenum"
+            android:background="@drawable/login_border"
+            android:drawableLeft="@drawable/ic_register_phone"
+            android:hint="@string/register_please_input_phonenumber"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_validatenum"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/et_phonenumber"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="@string/register_validatenum"
+            android:textColor="@color/bt_textColor"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/et_validatenum"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@id/tv_validatenum"
+            android:layout_below="@id/tv_validatenum"
+            android:background="@drawable/login_border"
+            android:drawableLeft="@drawable/ic_register_validate"
+            android:hint="@string/validate_code"
+            android:singleLine="true"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/bt_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/et_validatenum"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bt_start_selector"
+            android:gravity="center"
+            android:text="@string/register_next"
+            android:textColor="@color/bt_textColor"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/register_loading"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</FrameLayout>

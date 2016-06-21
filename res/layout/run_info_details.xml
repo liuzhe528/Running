@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/run_detail_title"
+        layout="@layout/title_bar_login" />
+
+    <TextView
+        android:id="@+id/tv_rundetail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/run_detail_title"
+        android:gravity="center"
+        android:text="今晚梅溪湖跑步"
+        android:textColor="@color/news_title_color"
+        android:textScaleX="1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_rundetail_yuedingtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rundetail_title"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="5dp"
+        android:text="约定时间：2016-03-08 18:00"
+        android:textColor="@color/news_time_color"
+        android:textScaleX="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_rundetail_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rundetail_yuedingtime"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="5dp"
+        android:text="约定地点：湖南省长沙市岳麓区梅溪湖东门旁边"
+        android:textColor="@color/news_time_color"
+        android:textScaleX="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_rundetail_xiangxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rundetail_address"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:text="详细内容："
+        android:textColor="@color/news_time_color"
+        android:textScaleX="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_rundetail_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rundetail_xiangxi"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:lines="5"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:text="今天我们在梅溪湖东门的门卫室旁边集合，大家想参加的一定要准时来哦！"
+        android:textColor="@color/news_time_color"
+        android:textScaleX="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_rundetail_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_rundetail_describe"
+        android:layout_marginRight="5dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="5dp"
+        android:text="发布者：凉城不暖少年心"
+        android:textColor="@color/news_time_color"
+        android:textScaleX="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_rundetail_fabutime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_rundetail_owner"
+        android:layout_marginRight="5dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="5dp"
+        android:text="发布时间：20160308"
+        android:textColor="@color/news_time_color"
+        android:textScaleX="1"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/bt_rundetail_join"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/bt_start_selector"
+        android:clickable="true"
+        android:text="立即参加"
+        android:textColor="@color/bt_textColor"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_rundetail_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77aaaaaa"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            layout="@layout/layout_loading" >
+        </include>
+    </RelativeLayout>
+
+</RelativeLayout>

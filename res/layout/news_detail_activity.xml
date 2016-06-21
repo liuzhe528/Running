@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/news_detail_bg" >
+
+    <include
+        android:id="@+id/new_detail_title"
+        layout="@layout/title_bar_login" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/new_detail_title"
+        android:layout_marginTop="3dp" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/news_detail_newstitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="今天凌晨发现一头母猪"
+                    android:textColor="@color/news_title_color"
+                    android:textScaleX="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/news_detail_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/news_detail_newstitle"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="来源：新浪网   2015-08-06 15:32:00"
+                    android:textColor="@color/news_time_color"
+                    android:textScaleX="1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/news_detail_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/news_detail_time"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="关键词：医生,疗效,司机,医患"
+                    android:textColor="@color/news_time_color"
+                    android:textScaleX="1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/news_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/news_detail_keyword"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="中午hi洗发水的快乐放假了看到发爱妃； 第三节疯狂啦的设计费了深刻的肌肤拉三等奖佛啊；交水电费快乐中午hi洗发水的快乐放假了看到发爱妃； 第三节疯狂啦的设计费了深刻的肌肤拉三等奖佛啊；交水电费快乐"
+                    android:textColor="@color/news_title_color"
+                    android:textScaleX="1"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/news_detail_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/loading" />
+    </FrameLayout>
+
+</RelativeLayout>

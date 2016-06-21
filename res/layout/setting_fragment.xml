@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/setting_tv_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="请输入体重(kg)，便于计算燃烧脂肪(g):"
+        android:textColor="@color/bt_textColor"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/setting_et_weight"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@id/setting_tv_weight"
+        android:layout_below="@id/setting_tv_weight"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_border"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:text="50"
+        android:textColor="@color/bt_textColor"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/setting_tv_length"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/setting_et_weight"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="输入步长(cm)，便于计算距离(m):"
+        android:textColor="@color/bt_textColor"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/setting_et_length"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@id/setting_tv_weight"
+        android:layout_below="@id/setting_tv_length"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_border"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:text="60"
+        android:textColor="@color/bt_textColor"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/setting_tv_sensitivity"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/setting_tv_weight"
+        android:layout_below="@id/setting_et_length"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="调整灵敏度:"
+        android:textColor="@color/bt_textColor"
+        android:textSize="17sp" />
+
+    <Spinner
+        android:id="@+id/setting_sensitivity"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/setting_tv_sensitivity"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/setting_tv_sensitivity"
+        android:spinnerMode="dialog" />
+
+    <Button
+        android:id="@+id/setting_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/setting_sensitivity"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bt_start_selector"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/bt_textColor"
+        android:textSize="17sp" />
+
+</RelativeLayout>

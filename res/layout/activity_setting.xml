@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/setting_title_bar"
+        layout="@layout/title_bar_setting" />
+
+    <RelativeLayout
+        android:id="@+id/rl_headImg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/setting_title_bar"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/setting_item_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="头像"
+            android:textSize="20sp" />
+
+        <com.lzstudio.healthy.view.ciclehead.CircleImageView
+            android:id="@+id/iv_setting_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:src="@drawable/ic_login_head"
+            app:border_color="#FFffffff"
+            app:border_width="2dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_headImg"
+        android:background="#99999999" />
+
+    <RelativeLayout
+        android:id="@+id/rl_nickName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_headImg"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/setting_item_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="昵称"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_username"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="凉城不暖少年心丶"
+            android:textColor="@color/bt_textColor"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_nickName"
+        android:background="#99999999" />
+
+    <RelativeLayout
+        android:id="@+id/rl_sex"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_nickName"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/setting_item_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="性别"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="男"
+            android:textColor="@color/bt_textColor"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_sex"
+        android:background="#99999999" />
+
+    <RelativeLayout
+        android:id="@+id/rl_age"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_sex"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/setting_item_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="年龄"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_age"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="21岁"
+            android:textColor="@color/bt_textColor"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_paceCount"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_age"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/setting_item_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="总步数"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_paceCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="0步"
+            android:textColor="@color/bt_textColor"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_paceCount"
+        android:background="#99999999" />
+
+    <RelativeLayout
+        android:id="@+id/rl_points"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_paceCount"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/setting_item_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="积分"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_points"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="0分"
+            android:textColor="@color/bt_textColor"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_setting_nologin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_points"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_start_selector"
+        android:text="退出登录"
+        android:textColor="@color/bt_textColor" />
+
+    <FrameLayout
+        android:id="@+id/fl_set_username"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99ffffff"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="140dp"
+            android:background="#dd555555" >
+
+            <TextView
+                android:id="@+id/tv_set_username_title"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="设置昵称"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_set_username"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_set_username_title"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/login_border"
+                android:hint="请输入昵称"
+                android:maxLength="8"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/bt_set_cancle"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/et_set_username"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bt_start_selector"
+                android:text="取消"
+                android:textColor="@color/bt_textColor" />
+
+            <Button
+                android:id="@+id/bt_set_sure"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/et_set_username"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bt_start_selector"
+                android:text="确定"
+                android:textColor="@color/bt_textColor" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_set_age"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99ffffff"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="140dp"
+            android:background="#dd555555" >
+
+            <TextView
+                android:id="@+id/tv_set_age_title"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="设置年龄"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_set_age"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_set_age_title"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/login_border"
+                android:hint="请输入年龄"
+                android:inputType="number"
+                android:maxLength="3"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/bt_set_age_cancle"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/et_set_age"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bt_start_selector"
+                android:text="取消"
+                android:textColor="@color/bt_textColor" />
+
+            <Button
+                android:id="@+id/bt_set_age_sure"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/et_set_age"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bt_start_selector"
+                android:text="确定"
+                android:textColor="@color/bt_textColor" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_set_sex"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99ffffff"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="140dp"
+            android:background="#dd555555" >
+
+            <TextView
+                android:id="@+id/tv_set_sex_title"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="选择性别"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_set_sex_man"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_set_sex_title"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#ffffff"
+                android:drawableRight="@drawable/ic_selected"
+                android:gravity="center_vertical"
+                android:text="男"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_set_sex_man"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#333333" />
+
+            <TextView
+                android:id="@+id/tv_set_sex_female"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_set_sex_man"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:text="女"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77aaaaaa"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            layout="@layout/layout_loading" >
+        </include>
+    </RelativeLayout>
+
+</RelativeLayout>

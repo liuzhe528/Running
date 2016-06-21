@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title_bar_set"
+        layout="@layout/title_bar_setting" />
+
+    <com.lzstudio.healthy.view.cutphoto.ClipImageLayout
+        android:id="@+id/set_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar_set" />
+
+</RelativeLayout>

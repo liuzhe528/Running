@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bt_textColor">#993D3D3D</color>
+    <color name="news_item_has_read_textcolor">#828282</color>
+    <color name="news_item_no_read_textcolor">#363636</color>
+    <color name="listview_press">#99c9c9c9</color>
+    <color name="news_title_color">#99444444</color>
+    <color name="news_time_color">#99222222</color>
+    <color name="news_detail_bg">#DFE3E7</color>
+    <color name="tab_indicator_bg">#8AB6F0</color>
+    <color name="list_view_bg">#ffffff</color>
+    <color name="listview_item_normal">#eef0ed</color>
+    <color name="listview_item_pressed">#d4d4d4</color>
+    <color name="setting_item_normal">#aaffffff</color>
+
+</resources>

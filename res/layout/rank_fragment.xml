@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rank_lv_pulltorefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_view_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/news_list_line"
+        android:fadingEdge="none"
+        android:horizontalSpacing="1dp"
+        android:listSelector="@drawable/listview_selector"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="1dp"
+        ptr:ptrMode="both" />
+
+    <include
+        android:id="@+id/rank_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading" />
+
+</FrameLayout>
