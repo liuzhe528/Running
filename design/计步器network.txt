@@ -1,0 +1,145 @@
+create table user(
+phoneNumber varchar(13) not null,
+username varchar(10) not null,
+sex varchar(2) default '男',
+age int(3) default 21,
+password varchar(60) not null,
+paceCount bigint(20) default 0,
+points int(20) default 0,
+registerTime varchar(50) default '',
+headImgSource varchar(100) default ''
+);
+注册返回的json: 0代表phoneNumber已存在，1代表成功,2代表username已存在，3代表数据库出错 register.html 参数 phoneNumber password username registerTime
+{
+	"result_code":1 
+}
+登录返回的Json: 0代表phoneNumber不存在，1代表成功，2代表密码错误,3代表数据库出错。 login.html 参数 phoneNumber password
+{
+	"result_code":1,
+	"body":
+	{
+		"username":"凉城不暖少年心丶",
+		"sex":"男",
+		"age":21,
+		"headImgSource":"www.baidu.com",
+		"paceCount":0
+		"points":0
+	}
+}
+设置返回的json:0代表username已存在，1代表成功，2代表数据库出错。 setting.html 参数 phoneNumber username sex age 
+{
+	"result_code":1
+}
+积分返回json:0代表用户积分不足，1代表成功，2代表数据库出错 3代表数据在传输过程中被修改 point.html 参数 phoneNumber time points secret
+{
+	"result_code":1
+}
+话费返回json:1代表成功，2代表数据库出错 3代表数据在传输过程中被修改 huafei.html 参数 phoneNumber time huafei secret
+{
+	"result_code":1
+}
+兑换话费返回json:0话费不足，1成功，2，数据库出错，3传输过程中被修改 duihuan.html 参数：phoneNumber time key(客户端随机生成) secret
+{
+	"result_code":1
+}
+查询积分   chaxunjifen.html 参数：phoneNumber
+{
+	"result_code":1，
+	“point”:100
+}
+查询话费   chaxunhuafei.html 参数：phoneNumber
+{
+	"result_code":1，
+	"huafei":100
+}
+步数返回json:1代表成功，2代表数据库出错 pace.html 参数：phoneNumber paceCount
+{
+	"result_code":1
+}
+修改密码返回json:0代表phoneNumber不存在，1代表成功，2代表密码错误,3代表数据库出错 password.html 参数 phoneNumber password newPassword
+{
+	"result_code":1
+}
+排行榜返回的json:0代表查询失败，1代表查询成功 rank.html 参数 page pageCount
+{
+	"result_code":1,
+	"rank":[
+	{
+		"username":"刘哲",
+		"paceCount":5000,
+		"age":22,
+		"sex":"男"
+	},
+	{
+		"username":"阳跞",
+		"paceCount":500,
+		"age":20,
+		"sex":"女"
+	},
+	]
+}
+发布约跑信息（每个用户每天只能参与一项）  fabu.html
+发布成功后在本地记录fabutime，下一次要发布时则对比当前日期与fabutime是否一致，
+不一致则联网发布，否则提示每天只能发布一条信息。
+返回的json:0代表失败，1代表成功  参数  title  yuedingtime  address  fabutime(服务器端获取)  owner(发布者)  describe（描述）  id 手机号（发布时间+手机号组成）
+{
+	"result_code":1,
+	"fabutime":"20160302"
+}  
+立即参加  joinrun.html 参数  phoneNumber  id
+成功后在本地记录id和fabutime，下次点击参加时只需要对比当前日期和上次发布日期是否一致，不一致则联网，否则提示每天只能参加一项
+0代表失败，1代表成功
+{
+	"result_code":1,
+	"fabutime":"20160302"
+} 
+正在进行   返回今天发布的所有信息（用fabutime进行对比）  ongoing.html 参数  phoneNumber  fabutime
+ 0代表查询失败，1代表查询成功
+{
+	"result_code":1,
+	"run":[
+	{
+		"id":"0000001",
+		"title":"xxxxxx",
+		"yuedingtime":"2016-2-24  18:00",
+		"address":"湖南省长沙市XXX",
+		"fabutime":"2016-2-24",
+		"owner":"凉城不暖少年心丶",
+		"describe":"今天在XX地方汇合"
+	},
+	{
+		"id":"0000002"
+		"title":"xxxxxx",
+		"yuedingtime":"2016-2-24  18:00",
+		"address":"湖南省长沙市XXX",
+		"fabutime":"2016-2-24",
+		"owner":"凉城不暖少年心丶",
+		"describe":"今天在XX地方汇合"
+	}
+	]
+}
+我参加的   joinedrun.html  参数  phoneNumber   fabutime  首先拿phoneNumber 到user表中查找runid ，
+若runid不为空，再用runid到run表中对比fabutime是否一致 ,
+若有，则利用runid在user表中查找runid相同的用户的username和phoneNumber以及headImageSource
+返回的json
+0代表数据库出错，1代表查询成功,2代表没有数据
+{
+	"result_code":1,
+	"run":
+	{
+		"title":"xxxxxx",
+		"yuedingtime":"2016-2-24  18:00",
+		"address":"湖南省长沙市XXX",
+		"fabutime":"2016-2-24",
+		"owner":"凉城不暖少年心丶",
+		"describe":"今天在XX地方汇合"
+	},
+	"body":[
+		{
+			"username":"XXXXX",
+			"phoneNumber":"123456789",
+			"headImgSource":"www.baidu.com"
+		}
+	]
+}
+
